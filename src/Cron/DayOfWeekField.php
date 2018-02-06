@@ -148,6 +148,11 @@ class DayOfWeekField extends AbstractField
         $basicChecks = parent::validate($value);
 
         if (!$basicChecks) {
+            
+            if ($value === '?') {
+                return true;
+            }
+            
             // Handle the # value
             if (strpos($value, '#') !== false) {
                 $chunks = explode('#', $value);
