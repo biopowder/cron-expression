@@ -115,7 +115,7 @@ class DayOfMonthField extends AbstractField
 
         if (!$basicChecks) {
 
-            if ($value === 'L') {
+            if ($value === 'L' || $value === '?') {
                 return true;
             }
 
